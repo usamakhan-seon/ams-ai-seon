@@ -313,7 +313,7 @@ export function AdverseMediaScreening() {
         </div>
 
         {/* Heading Banner */}
-        <div className="px-6 py-4 border-b border-border bg-card">
+        <div className="px-6 py-4 border-b border-border">
             <div className="flex items-center justify-between">
               <h1 className="text-[18px] font-semibold text-foreground">
                 Adverse Media Screening

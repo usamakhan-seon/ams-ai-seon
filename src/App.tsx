@@ -1,5 +1,5 @@
-import { AdverseMediaScreening } from './components/AdverseMediaScreening';
+import { ManualLookup } from './components/ManualLookup';
 
 export default function App() {
-  return <AdverseMediaScreening />;
+  return <ManualLookup />;
 }

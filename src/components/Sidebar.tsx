@@ -13,17 +13,16 @@ import {
   Activity,
   Settings,
   ChevronLeft,
-  ExternalLink,
-  Newspaper
+  ExternalLink
 } from 'lucide-react';
 import svgPaths from '../imports/svg-m05st3o4hq';
 
 interface SidebarProps {
-  activeView?: 'adverse-media' | 'adverse-media-results';
-  onNavigate?: (view: 'adverse-media' | 'adverse-media-results') => void;
+  activeView?: string;
+  onNavigate?: (view: string) => void;
 }
 
-export function Sidebar({ activeView = 'adverse-media', onNavigate }: SidebarProps) {
+export function Sidebar({ activeView, onNavigate }: SidebarProps) {
   return (
     <div className="w-[220px] bg-sidebar text-sidebar-foreground flex flex-col h-screen">
       {/* Logo */}
@@ -54,12 +53,11 @@ export function Sidebar({ activeView = 'adverse-media', onNavigate }: SidebarPro
           <NavItem icon={Users} label="Customers" />
           <NavItem icon={Bell} label="Alerts" />
           <NavItem icon={FolderOpen} label="Cases" />
-          <NavItem icon={Hand} label="Manual Lookup" />
           <NavItem 
-            icon={Newspaper} 
-            label="Adverse Media Screening" 
-            active={activeView === 'adverse-media'}
-            onClick={() => onNavigate?.('adverse-media')}
+            icon={Hand} 
+            label="Manual Lookup" 
+            active={activeView === 'manual-lookup'}
+            onClick={() => onNavigate?.('manual-lookup')}
           />
           <NavItem icon={Coins} label="AML" />
           <NavItem icon={Calculator} label="Scoring Engine" />
