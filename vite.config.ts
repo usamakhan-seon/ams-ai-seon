@@ -56,7 +56,8 @@
     },
     build: {
       target: 'esnext',
-      outDir: 'build',
+      // Use Vite's default output directory so Vercel (Vite preset) finds it automatically
+      outDir: 'dist',
     },
     server: {
       port: 3000,
